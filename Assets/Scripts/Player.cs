@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            Jump();s
         }
     }
 
