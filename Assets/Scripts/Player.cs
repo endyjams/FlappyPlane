@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
 
-    [SerializeField] private float _strength = 10f;
+    [SerializeField] private float _strength = 5f;
 
     private void Awake() 
     {
