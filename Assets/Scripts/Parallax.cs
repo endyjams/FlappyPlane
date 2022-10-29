@@ -10,7 +10,8 @@ public class Parallax : MonoBehaviour
 
     private float _actualImageSize;
 
-    private void Awake() {
+    private void Awake() 
+    {
         _initialPosition = transform.position;
 
         float _imageSize = GetComponent<SpriteRenderer>().size.x;
@@ -20,7 +21,8 @@ public class Parallax : MonoBehaviour
         _actualImageSize = _imageSize * _scale;
     }
 
-    private void Update() {
+    private void Update() 
+    {
         float _displacement = Mathf.Repeat(_speed * Time.time, _actualImageSize);
 
         transform.position = _initialPosition + Vector3.left * _displacement;

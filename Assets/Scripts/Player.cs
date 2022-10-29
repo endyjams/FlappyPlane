@@ -8,6 +8,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float _strength;
 
+    [SerializeField] private Sprite[] _sprites;
+
+    private SpriteRenderer spriteRenderer;
+
+    private int _spriteIndex;
+
     private Vector3 _initialPosition;
 
     private GameManager gameManager;
@@ -16,11 +22,15 @@ public class Player : MonoBehaviour
     {
         _initialPosition = transform.position;
 
-        _rb = this.GetComponent<Rigidbody2D>();   
+        _rb = GetComponent<Rigidbody2D>();   
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start() 
     {
+        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
+
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
@@ -30,6 +40,18 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
+    }
+
+    private void AnimateSprite()
+    {
+        _spriteIndex++;
+
+        if (_spriteIndex >= _sprites.Length)
+        {
+            _spriteIndex = 0;
+        }
+
+        spriteRenderer.sprite = _sprites[_spriteIndex];
     }
 
     public void Restart()

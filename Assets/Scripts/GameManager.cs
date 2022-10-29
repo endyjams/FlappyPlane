@@ -8,9 +8,13 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Player player;
 
+    private Scoring _score;
+
     private void Start() 
     {
-        player = GameObject.FindObjectOfType<Player>();    
+        player = GameObject.FindObjectOfType<Player>();
+
+        _score = GameObject.FindObjectOfType<Scoring>();  
     }
     public void gameOver()
     {
@@ -28,6 +32,8 @@ public class GameManager : MonoBehaviour
         player.Restart();
 
         DestroyObstacles();
+
+        _score.Restart();
     }
 
     private void DestroyObstacles()
