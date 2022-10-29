@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Scoring : MonoBehaviour
 {
     [SerializeField] private Text _scoreText;
-    private int _score;
+    
+    public int Score { get; private set; }
 
     private AudioSource _scoreAudio;
 
@@ -17,12 +18,12 @@ public class Scoring : MonoBehaviour
 
     private void updateText()
     {
-        _scoreText.text = _score.ToString();
+        _scoreText.text = Score.ToString();
     }
 
     public void Add() 
     {
-        _score++;
+        Score++;
 
         updateText();
 
@@ -31,7 +32,7 @@ public class Scoring : MonoBehaviour
 
     public void Restart()
     {
-        _score = 0;
+        Score = 0;
 
         updateText();
     }
@@ -40,9 +41,9 @@ public class Scoring : MonoBehaviour
     {
         int currentBestScore = PlayerPrefs.GetInt("BestScore");
 
-        if (_score > currentBestScore)
+        if (Score > currentBestScore)
         {
-            PlayerPrefs.SetInt("BestScore", _score);
+            PlayerPrefs.SetInt("BestScore", Score);
         }
     }
 }

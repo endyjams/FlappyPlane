@@ -6,7 +6,7 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
 
-    [SerializeField] private float _speed = 0.1f;
+    [SerializeField] private SharedVariableFloat _speed;
 
     [SerializeField] private float _yVariation;
 
@@ -30,7 +30,7 @@ public class Obstacle : MonoBehaviour
 
     private void Update() 
     {  
-        transform.Translate(Vector3.left * _speed * Time.deltaTime);
+        transform.Translate(Vector3.left * _speed.value * Time.deltaTime);
 
         if (!_didScore && transform.position.x < _playerPosition.x)
         {

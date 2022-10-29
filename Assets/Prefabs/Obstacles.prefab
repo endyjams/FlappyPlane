@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3501764432886978123}
   - component: {fileID: 7243657312149222102}
   m_Layer: 0
-  m_Name: Pipes
+  m_Name: Obstacles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 7243657312149222102}
-  _speed: 5
+  _speed: {fileID: 11400000, guid: 6cf397ec273e03993ad16d374a5d87ce, type: 2}
   _yVariation: 1.3
 --- !u!50 &7243657312149222102
 Rigidbody2D:

@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Player player;
-
+    
     private Scoring _score;
 
     private GameOverUI gameOverUI;

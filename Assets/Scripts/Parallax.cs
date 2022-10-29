@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] private float _speed;
+    [SerializeField] private SharedVariableFloat _speed;
 
     private Vector3 _initialPosition;
 
@@ -23,7 +23,7 @@ public class Parallax : MonoBehaviour
 
     private void Update() 
     {
-        float _displacement = Mathf.Repeat(_speed * Time.time, _actualImageSize);
+        float _displacement = Mathf.Repeat(_speed.value * Time.time, _actualImageSize);
 
         transform.position = _initialPosition + Vector3.left * _displacement;
     }
