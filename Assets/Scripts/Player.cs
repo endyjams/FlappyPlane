@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     private GameManager gameManager;
 
+    private bool _shouldJump;
+
     private void Awake() 
     {
         _initialPosition = transform.position;
@@ -31,8 +33,16 @@ public class Player : MonoBehaviour
     {
         if (gameManager.ClickChecker())
         {
-            Jump();
+            _shouldJump = true;
         }
+    }
+
+    private void FixedUpdate() 
+    {
+        if (_shouldJump)
+        {
+            Jump();
+        }    
     }
 
     public void Restart()
@@ -46,6 +56,8 @@ public class Player : MonoBehaviour
         _rb.velocity = Vector2.zero;
 
         _rb.AddForce(Vector2.up * _strength, ForceMode2D.Impulse);
+
+        _shouldJump = false;
     }
 
     private void OnCollisionEnter2D(Collision2D other) 
