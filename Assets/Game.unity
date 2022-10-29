@@ -679,7 +679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &787639727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -916,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27964407, y: 0.030000001}
   m_AnchorMax: {x: 0.7286903, y: 0.31}
-  m_AnchoredPosition: {x: -0.7310028, y: -1.5205688}
+  m_AnchoredPosition: {x: -0.73101807, y: -1.5205078}
   m_SizeDelta: {x: 85.781296, y: 30.285}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &934464169
@@ -6126,7 +6126,7 @@ Transform:
   m_GameObject: {fileID: 1075400982}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.4499998, y: -0.23, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 955795183}
@@ -6234,7 +6234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.767, y: 0}
   m_AnchorMax: {x: 1, y: 0.767}
-  m_AnchoredPosition: {x: -1.6000061, y: -0.9999924}
+  m_AnchoredPosition: {x: -1.6000061, y: -1}
   m_SizeDelta: {x: -3, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1128226346
@@ -6784,16 +6784,16 @@ RectTransform:
   m_GameObject: {fileID: 1853170064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 154400786}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.42200002, y: 0.76279724}
-  m_AnchorMax: {x: 0.58434016, y: 0.93200004}
-  m_AnchoredPosition: {x: -3, y: 0.5}
-  m_SizeDelta: {x: 131.782, y: 75.516205}
+  m_AnchorMin: {x: 0.33056098, y: 0.6328156}
+  m_AnchorMax: {x: 0.67087805, y: 1}
+  m_AnchoredPosition: {x: -1, y: 1.5}
+  m_SizeDelta: {x: -14.218002, y: -15.483795}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1853170066
 MonoBehaviour:

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
 
     [SerializeField] private float _strength;
+
     private SpriteRenderer spriteRenderer;
 
     private int _spriteIndex;
@@ -17,11 +18,15 @@ public class Player : MonoBehaviour
 
     private bool _shouldJump;
 
+    private Animator playerAnimation;
+
     private void Awake() 
     {
         _initialPosition = transform.position;
 
-        _rb = GetComponent<Rigidbody2D>();   
+        _rb = GetComponent<Rigidbody2D>();
+
+        playerAnimation = GetComponent<Animator>();
     }
 
     private void Start() 
@@ -35,6 +40,8 @@ public class Player : MonoBehaviour
         {
             _shouldJump = true;
         }
+
+        playerAnimation.SetFloat("ySpeed", _rb.velocity.y);
     }
 
     private void FixedUpdate() 
@@ -51,6 +58,7 @@ public class Player : MonoBehaviour
 
         _rb.simulated = true;
     }
+
     private void Jump()
     {
         _rb.velocity = Vector2.zero;
