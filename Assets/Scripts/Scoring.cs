@@ -35,4 +35,14 @@ public class Scoring : MonoBehaviour
 
         updateText();
     }
+
+    public void SaveBestScore()
+    {
+        int currentBestScore = PlayerPrefs.GetInt("BestScore");
+
+        if (_score > currentBestScore)
+        {
+            PlayerPrefs.SetInt("BestScore", _score);
+        }
+    }
 }

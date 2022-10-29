@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject _gameOverImage;
-
     [SerializeField] private Player player;
 
     private Scoring _score;
+
+    private GameOverUI gameOverUI;
 
     private void Start() 
     {
         player = GameObject.FindObjectOfType<Player>();
 
-        _score = GameObject.FindObjectOfType<Scoring>();  
+        _score = GameObject.FindObjectOfType<Scoring>();
+
+        gameOverUI = GameObject.FindObjectOfType<GameOverUI>();  
     }
 
     public bool ClickChecker()
@@ -25,12 +27,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
 
-        _gameOverImage.SetActive(true);
+        _score.SaveBestScore();
+
+        gameOverUI.ShowUI();
     }
 
     public void RestartGame()
     {
-        _gameOverImage.SetActive(false);
+        gameOverUI.HideUI();
         
         Time.timeScale = 1;
         
