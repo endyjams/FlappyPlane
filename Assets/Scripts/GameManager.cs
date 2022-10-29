@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
 
         _score = GameObject.FindObjectOfType<Scoring>();  
     }
+
+    public bool ClickChecker()
+    {
+        return (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) ? true : false;
+    }
     public void gameOver()
     {
         Time.timeScale = 0;

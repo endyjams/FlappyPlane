@@ -7,9 +7,6 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
 
     [SerializeField] private float _strength;
-
-    [SerializeField] private Sprite[] _sprites;
-
     private SpriteRenderer spriteRenderer;
 
     private int _spriteIndex;
@@ -23,35 +20,19 @@ public class Player : MonoBehaviour
         _initialPosition = transform.position;
 
         _rb = GetComponent<Rigidbody2D>();   
-
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Start() 
     {
-        InvokeRepeating(nameof(AnimateSprite), 0.15f, 0.15f);
-
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (gameManager.ClickChecker())
         {
             Jump();
         }
-    }
-
-    private void AnimateSprite()
-    {
-        _spriteIndex++;
-
-        if (_spriteIndex >= _sprites.Length)
-        {
-            _spriteIndex = 0;
-        }
-
-        spriteRenderer.sprite = _sprites[_spriteIndex];
     }
 
     public void Restart()
