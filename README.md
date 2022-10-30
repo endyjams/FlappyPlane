@@ -12,8 +12,8 @@
 - Input Management
 - Particles System
 - Sprites Management
-- Single Animation on a Object
-- Blend Tree to Multiple Animations on a Object
+- Single Animation on an Object
+- Blend Tree to Multiple Animations on an Object
 - Data Persistency to track player Best Score
 - Manipulating UI Elements
 - Make Responsive UI
