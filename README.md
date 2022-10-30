@@ -18,3 +18,4 @@
 - Manipulating UI Elements
 - Make Responsive UI
 - Audio Management
+- Scriptable Objects (Shared Variables)
