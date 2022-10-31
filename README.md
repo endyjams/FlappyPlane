@@ -19,3 +19,4 @@
 - Make Responsive UI
 - Audio Management
 - Scriptable Objects (Shared Variables)
+- Code Refactoring
