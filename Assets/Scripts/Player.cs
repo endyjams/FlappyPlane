@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField]
+    private Rigidbody2D _rb;
 
-    [SerializeField] private float _strength;
+    [SerializeField]
+    private float _strength;
 
     private SpriteRenderer spriteRenderer;
 
@@ -70,8 +72,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
-        _rb.simulated = false;
+        if (other.gameObject.tag == "Obstacle")
+        {
+            _rb.simulated = false;
 
-        gameManager.gameOver();
+            gameManager.gameOver();
+        }
     }
 }

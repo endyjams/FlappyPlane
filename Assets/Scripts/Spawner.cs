@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private float _easySpawnTime;
+    [SerializeField]
+    private float _easySpawnTime;
 
-    [SerializeField] private float _hardSpawnTime;
+    [SerializeField]
+    private float _hardSpawnTime;
 
-    [SerializeField] private GameObject _Instructions;
+    [SerializeField]
+    private GameObject _Instructions;
 
     private float _shouldSpawn;
 
