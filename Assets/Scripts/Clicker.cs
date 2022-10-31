@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Clicker : MonoBehaviour
@@ -16,6 +14,7 @@ public class Clicker : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();    
     }
+
     private void Update() 
     {
         if (gameManager.ClickChecker())

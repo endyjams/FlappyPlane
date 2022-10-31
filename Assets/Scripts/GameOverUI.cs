@@ -5,17 +5,23 @@ using UnityEngine.UI;
 
 public class GameOverUI : MonoBehaviour
 {
-    [SerializeField] private GameObject _gameOverImage;
+    [SerializeField]
+    private GameObject _gameOverImage;
 
-    [SerializeField] private Text _bestScoreText;
+    [SerializeField]
+    private Text _bestScoreText;
 
-    [SerializeField] private Image _medalPosition;
+    [SerializeField]
+    private Image _medalPosition;
 
-    [SerializeField] private Sprite _goldMedal;
+    [SerializeField]
+    private Sprite _goldMedal;
 
-    [SerializeField] private Sprite _silverMedal;
+    [SerializeField]
+    private Sprite _silverMedal;
 
-    [SerializeField] private Sprite _bronzeMedal;
+    [SerializeField]
+    private Sprite _bronzeMedal;
 
     private Scoring score;
 

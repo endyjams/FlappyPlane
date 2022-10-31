@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField]
+    private Rigidbody2D _rb;
 
-    [SerializeField] private SharedVariableFloat _speed;
+    [SerializeField]
+    private SharedVariableFloat _speed;
 
-    [SerializeField] private float _yVariation;
+    [SerializeField]
+    private float _yVariation;
 
     private Scoring _score;
 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DifficultyManager : MonoBehaviour
 {
-    [SerializeField] private float _maxDifficultyTime;  
+    [SerializeField]
+    private float _maxDifficultyTime;  
     
     private float _currentTime;
     
