@@ -13,7 +13,7 @@
   - Manipulation
  
 - Scripts
-  - Scriptable Objects
+  - Scriptable Objects(SharedVariables)
   - Management
     - Player Movement
     - Input
